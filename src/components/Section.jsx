@@ -1,18 +1,15 @@
 import React from "react";
-
-function componentsRender(element) {
-  if (element.component === "section") {
-    return <Section {...element} key={element.id} />;
-  }
-}
+import componentsRender from "../helpers/componentsRender";
 
 function Section(props) {
-  const { id, title, description, children } = props;
+  const { id, title, description, children, state, setState } = props;
   return (
     <section>
       <h2>{title}</h2>
       <p>{description}</p>
-      {children ? children.map(componentsRender) : null}
+      {children
+        ? children.map((el) => componentsRender(el, state, setState))
+        : null}
     </section>
   );
 }

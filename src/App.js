@@ -16,6 +16,13 @@ const state = [
         title: "I'm children section",
         description: "I'm first children Section",
       },
+      {
+        id: randomId(),
+        component: "input",
+        title: "I'm children section",
+        description: "I'm first children Section",
+        value: "",
+      },
     ],
   },
   {
@@ -36,7 +43,13 @@ function App() {
   const [stateAll, setStateAll] = useState(state);
   return (
     <div className="App">
-      {stateAll ? stateAll.map(componentsRender) : <h1>No State</h1>}
+      {stateAll ? (
+        stateAll.map((element) =>
+          componentsRender(element, stateAll, (e) => setStateAll(e))
+        )
+      ) : (
+        <h1>No State</h1>
+      )}
     </div>
   );
 }
