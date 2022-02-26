@@ -9,23 +9,15 @@ let isObject = function (obj) {
 };
 
 function objectStateTree(tr, findString, setValue) {
-  let paths = [];
-  let find = "";
   function findPath(branch, str) {
     Object.keys(branch).forEach(function (key) {
       if (isArray(branch[key]) || isObject(branch[key])) {
         findPath(branch[key], str ? str + "." + key : key);
       } else {
         if (branch[key] === findString) {
-          if (setValue) {
-            branch["value"] = setValue;
-            return branch;
-          } else {
-            find = str;
-            return find;
-          }
+          branch["value"] = setValue;
+          return branch;
         }
-        paths.push(str ? str + "." + key : key);
       }
     });
   }

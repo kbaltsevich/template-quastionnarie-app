@@ -19,8 +19,8 @@ const state = [
       {
         id: randomId(),
         component: "input",
-        title: "I'm children section",
-        description: "I'm first children Section",
+        title: "I'm children input",
+        description: "I'm first children Input",
         value: "",
       },
     ],
