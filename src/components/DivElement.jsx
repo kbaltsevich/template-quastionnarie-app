@@ -1,7 +1,7 @@
 import React from "react";
 import componentsRender from "../helpers/componentsRender";
 
-function Section(props) {
+function DivElement(props) {
   const {
     id,
     title,
@@ -13,7 +13,7 @@ function Section(props) {
     classNameSectionButtons,
   } = props;
   return (
-    <section
+    <div
       id={id}
       className={
         classNameSectionButtons
@@ -26,8 +26,8 @@ function Section(props) {
       {children
         ? children.map((el) => componentsRender(el, state, setState))
         : null}
-    </section>
+    </div>
   );
 }
 
-export default Section;
+export default DivElement;
