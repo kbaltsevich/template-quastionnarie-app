@@ -2,12 +2,23 @@ import React from "react";
 import objectStateTree from "../helpers/objectStateTree";
 
 function Input(props) {
-  const { state, id, setState, title, description, name, type } = props;
+  const {
+    state,
+    id,
+    setState,
+    title,
+    description,
+    name,
+    type,
+    classNameSection,
+    classNameInput,
+  } = props;
   return (
-    <div>
+    <div className={classNameSection ?? ""}>
       <h2>{title}</h2>
       <p>{description}</p>
       <input
+        className={classNameInput ?? ""}
         name={
           name
             ? `${name}_${id}_${new Date().getTime()}`

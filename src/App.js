@@ -12,7 +12,7 @@ const state = [
     children: [
       {
         id: randomId(),
-        component: "section",
+        component: "div",
         title: "I'm children section",
         description: "I'm first children Section",
       },
@@ -34,6 +34,12 @@ const state = [
   {
     id: randomId(),
     component: "section",
+    title: "I'm 3",
+    description: "I'm 3 Section",
+  },
+  {
+    id: randomId(),
+    component: "div",
     title: "I'm 3",
     description: "I'm 3 Section",
   },
