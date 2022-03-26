@@ -1,81 +1,12 @@
 import "./App.css";
 import { React, useState } from "react";
-import randomId from "./helpers/randomId";
 import componentsRender from "./helpers/componentsRender";
+import db from "./helpers/db";
 
-const state = [
-  {
-    id: randomId(),
-    component: "section",
-    title: "I'm section",
-    description: "I'm first Section",
-    classNameSection: "first__section",
-    children: [
-      {
-        id: randomId(),
-        component: "div",
-        title: "I'm children section",
-        description: "I'm first children Section",
-        children: [
-          {
-            id: randomId(),
-            component: "input",
-            title: "I'm children input",
-            description: "I'm first children Input",
-            value: "",
-          },
-          {
-            id: randomId(),
-            component: "p",
-            description: "I'm first Paragraph",
-          },
-        ],
-      },
-      {
-        id: randomId(),
-        component: "input",
-        title: "I'm children input",
-        description: "I'm first children Input",
-        value: "",
-      },
-      {
-        id: randomId(),
-        component: "p",
-        description: "I'm first Paragraph",
-      },
-      {
-        id: randomId(),
-        component: "nextPrevBtn",
-        classNameSection: null,
-        nextBtn: true,
-        prevBtn: true,
-        nextBtnTitle: "next",
-        prevBtnTitle: "prev",
-      },
-    ],
-  },
-  {
-    id: randomId(),
-    component: "section",
-    title: "I'm 2",
-    description: "I'm 2 Section",
-  },
-  {
-    id: randomId(),
-    component: "section",
-    title: "I'm 3",
-    description: "I'm 3 Section",
-  },
-  {
-    id: randomId(),
-    component: "div",
-    title: "I'm 3",
-    description: "I'm 3 Section",
-  },
-];
+console.log(db);
 
 function App() {
-  const [stateAll, setStateAll] = useState(state);
+  const [stateAll, setStateAll] = useState(db);
   return (
     <div className="App">
       {stateAll ? (
