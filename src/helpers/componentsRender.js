@@ -3,6 +3,7 @@ import Input from "../components/Input";
 import DivElement from "./../components/DivElement";
 import Paragraph from "./../components/Paragraph";
 import NextPrevButtons from "./../components/NextPrevButtons";
+import Form from "./../components/Form";
 
 function componentsRender(element, state, setState) {
   if (element.component === "section") {
@@ -13,6 +14,11 @@ function componentsRender(element, state, setState) {
         state={state}
         setState={setState}
       />
+    );
+  }
+  if (element.component === "form") {
+    return (
+      <Form {...element} key={element.id} state={state} setState={setState} />
     );
   }
   if (element.component === "nextPrevBtn") {

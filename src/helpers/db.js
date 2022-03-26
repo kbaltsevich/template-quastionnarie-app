@@ -78,6 +78,33 @@ const db = [
     prevBtnTitle: "prev",
     classNameSectionButtons: "test",
   },
+  {
+    id: randomId(),
+    component: "form",
+    title: "simple form",
+    description: "I simple form",
+    buttonTitle: "Send Form",
+    children: [
+      {
+        id: randomId(),
+        component: "input",
+        title: "I'm children input",
+        value: "",
+      },
+      {
+        id: randomId(),
+        component: "input",
+        title: "I'm children input",
+        value: "",
+      },
+      {
+        id: randomId(),
+        component: "input",
+        title: "I'm children input",
+        value: "",
+      },
+    ],
+  },
 ];
 
 export default db;
