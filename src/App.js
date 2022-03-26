@@ -43,6 +43,15 @@ const state = [
         component: "p",
         description: "I'm first Paragraph",
       },
+      {
+        id: randomId(),
+        component: "nextPrevBtn",
+        classNameSection: null,
+        nextBtn: true,
+        prevBtn: true,
+        nextBtnTitle: "next",
+        prevBtnTitle: "prev",
+      },
     ],
   },
   {

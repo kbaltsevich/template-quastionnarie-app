@@ -2,6 +2,7 @@ import Section from "../components/Section";
 import Input from "../components/Input";
 import DivElement from "./../components/DivElement";
 import Paragraph from "./../components/Paragraph";
+import NextPrevButtons from "./../components/NextPrevButtons";
 
 function componentsRender(element, state, setState) {
   if (element.component === "section") {
@@ -13,6 +14,9 @@ function componentsRender(element, state, setState) {
         setState={setState}
       />
     );
+  }
+  if (element.component === "nextPrevBtn") {
+    return <NextPrevButtons {...element} key={element.id} />;
   }
   if (element.component === "p") {
     return <Paragraph {...element} key={element.id} />;
