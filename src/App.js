@@ -9,12 +9,27 @@ const state = [
     component: "section",
     title: "I'm section",
     description: "I'm first Section",
+    classNameSection: "first__section",
     children: [
       {
         id: randomId(),
         component: "div",
         title: "I'm children section",
         description: "I'm first children Section",
+        children: [
+          {
+            id: randomId(),
+            component: "input",
+            title: "I'm children input",
+            description: "I'm first children Input",
+            value: "",
+          },
+          {
+            id: randomId(),
+            component: "p",
+            description: "I'm first Paragraph",
+          },
+        ],
       },
       {
         id: randomId(),
@@ -22,6 +37,11 @@ const state = [
         title: "I'm children input",
         description: "I'm first children Input",
         value: "",
+      },
+      {
+        id: randomId(),
+        component: "p",
+        description: "I'm first Paragraph",
       },
     ],
   },
