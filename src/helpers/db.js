@@ -103,6 +103,11 @@ const db = [
         title: "I'm children input",
         value: "",
       },
+      {
+        id: randomId(),
+        component: "p",
+        description: "I'm first Paragraph",
+      },
     ],
   },
 ];
