@@ -3,8 +3,6 @@ import { React, useState } from "react";
 import componentsRender from "./helpers/componentsRender";
 import db from "./helpers/db";
 
-console.log(db);
-
 function App() {
   const [stateAll, setStateAll] = useState(db);
   return (

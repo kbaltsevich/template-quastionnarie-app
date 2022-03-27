@@ -1,5 +1,6 @@
 import randomId from "./randomId";
 const db = [
+  { id: randomId(), component: "h1", title: "I'm Template" },
   {
     id: randomId(),
     component: "section",
