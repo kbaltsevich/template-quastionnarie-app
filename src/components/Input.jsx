@@ -27,6 +27,7 @@ function Input(props) {
         type={type ? type : "text"}
         onChange={(e) => {
           const newState = objectStateTree(state, id, e.target.value);
+          console.log(state)
           return setState(newState);
         }}
       />
